@@ -1,25 +1,26 @@
 import sys
-from PyQt4 import QtCore, QtGui
-from PyQt4 import QtCore
-from form_main import *  # Load the form
 
-class Main(QtGui.QMainWindow): # First Menu
+from PyQt4.QtGui import QMainWindow, QApplication, QIcon
+from form_main import Ui_MainWindow  # Load the form | Class in form_main.py
+
+
+class Main(QMainWindow): # First Menu
 
     def __init__(self):
-        QtGui.QMainWindow.__init__(self)
+        QMainWindow.__init__(self)
         self.ui=Ui_MainWindow()
         self.ui.setupUi(self)
-
- 	self.ui.btn_update.clicked.connect(self.btn_update_cliked)
+        self.ui.btn_update.clicked.connect(self.btn_update_cliked)
 
     def btn_update_cliked(self):
-        self.ui.line_teste.setText("Helo")
+        self.ui.line_teste.setText("Hello")
+        
 
 def main():
-    app = QtGui.QApplication(sys.argv)
+    app = QApplication(sys.argv)
     window=Main()
     window.show()
-    window.setWindowIcon(QtGui.QIcon('web.png'))      
+    window.setWindowIcon(QIcon('web.png'))      
     app.exec_()
    
 
