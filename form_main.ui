@@ -47,8 +47,26 @@
      <height>23</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuDataBase">
+    <property name="title">
+     <string>DataBase</string>
+    </property>
+    <addaction name="actionCreate_DataBase"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuDataBase"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionCreate_DataBase">
+   <property name="text">
+    <string>Create DataBase</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

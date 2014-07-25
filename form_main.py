@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'form_main.ui'
 #
-# Created: Wed Jul 23 03:33:18 2014
+# Created: Fri Jul 25 21:08:18 2014
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -39,10 +39,19 @@ class Ui_MainWindow(object):
         self.menubar = QtGui.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 23))
         self.menubar.setObjectName(_fromUtf8("menubar"))
+        self.menuFile = QtGui.QMenu(self.menubar)
+        self.menuFile.setObjectName(_fromUtf8("menuFile"))
+        self.menuDataBase = QtGui.QMenu(self.menubar)
+        self.menuDataBase.setObjectName(_fromUtf8("menuDataBase"))
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtGui.QStatusBar(MainWindow)
         self.statusbar.setObjectName(_fromUtf8("statusbar"))
         MainWindow.setStatusBar(self.statusbar)
+        self.actionCreate_DataBase = QtGui.QAction(MainWindow)
+        self.actionCreate_DataBase.setObjectName(_fromUtf8("actionCreate_DataBase"))
+        self.menuDataBase.addAction(self.actionCreate_DataBase)
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuDataBase.menuAction())
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -50,4 +59,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
         self.btn_update.setText(_translate("MainWindow", "Update", None))
+        self.menuFile.setTitle(_translate("MainWindow", "File", None))
+        self.menuDataBase.setTitle(_translate("MainWindow", "DataBase", None))
+        self.actionCreate_DataBase.setText(_translate("MainWindow", "Create DataBase", None))
 

@@ -1,6 +1,6 @@
+from PyQt4.QtGui import QMainWindow, QApplication, QIcon
 import sys
 
-from PyQt4.QtGui import QMainWindow, QApplication, QIcon
 from form_main import Ui_MainWindow  # Load the form | Class in form_main.py
 
 
@@ -11,7 +11,8 @@ class Main(QMainWindow): # First Menu
         self.ui=Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.btn_update.clicked.connect(self.btn_update_cliked)
-
+        self.ui.actionCreate_DataBase.triggered.connect(self.btn_update_cliked)
+        
     def btn_update_cliked(self):
         self.ui.line_teste.setText("Hello")
         
