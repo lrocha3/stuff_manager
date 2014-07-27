@@ -6,7 +6,7 @@ stuff_manager
 
 This project is made purely using Python.
 
-Libraries that i use: PyQt, PyCore, sqlite3
+Libraries that i use: PyQt, PyCore, QTSql
 
 IDE's Used:
 
